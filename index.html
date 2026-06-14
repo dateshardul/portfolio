@@ -1,83 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <section id="home" class="hero">
-        <h1>Shardul Date</h1>
-        <p class="tagline">Mechanical Engineering Student | ML Enthusiast | Developer</p>
-    </section>
+  <!-- ============ PRIMARY SEO ============ -->
+  <title>Shardul Date — Mechanical Engineer × AI / Full-Stack Developer | IIT Jodhpur</title>
+  <meta name="description" content="Shardul Date is a Mechanical Engineer from IIT Jodhpur building at the intersection of hardware, AI and software — from multi-user Mixed Reality terrain and digital-twin agriculture to real-time audio engines, FEA, and machine design. Explore selected work." />
+  <meta name="keywords" content="Shardul Date, IIT Jodhpur, Mechanical Engineer, AI Engineer, Full Stack Developer, Machine Learning, Unity, SolidWorks, FEA, CFD, Digital Twin, Portfolio" />
+  <meta name="author" content="Shardul Date" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#08080b" />
+  <link rel="canonical" href="https://dateshardul.github.io/" />
 
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <img src="your-photo.jpg" alt="Shardul Date" class="profile-img">
-            <div class="about-text">
-                <p>3rd year Mechanical Engineering student at IIT Jodhpur with a minor in Management. I have a solid foundation and deep interest in mathematics, with experience in developing front-end applications and working on data-driven projects.</p>
-                <div class="skills">
-                    <h3>Technical Skills</h3>
-                    <div class="skill-tags">
-                        <span>Python</span>
-                        <span>C</span>
-                        <span>HTML5/CSS3</span>
-                        <span>Machine Learning</span>
-                        <span>FlutterFlow</span>
-                        <span>Data Analysis</span>
-                    </div>
-                </div>
-            </div>
+  <!-- ============ OPEN GRAPH ============ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Shardul Date" />
+  <meta property="og:title" content="Shardul Date — Mechanical Engineer × AI / Full-Stack Developer" />
+  <meta property="og:description" content="Building at the intersection of hardware, AI and software. Mixed Reality, digital-twin agriculture, real-time audio engines, FEA & machine design. IIT Jodhpur." />
+  <meta property="og:url" content="https://dateshardul.github.io/" />
+  <meta property="og:image" content="https://dateshardul.github.io/images/og-image.jpg" />
+  <meta property="og:image:alt" content="Shardul Date" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- ============ TWITTER ============ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shardul Date — Mechanical Engineer × AI / Full-Stack Developer" />
+  <meta name="twitter:description" content="Building at the intersection of hardware, AI and software. IIT Jodhpur." />
+  <meta name="twitter:image" content="https://dateshardul.github.io/images/og-image.jpg" />
+
+  <!-- ============ ICONS / MANIFEST ============ -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23ff5c35'/%3E%3Ctext x='50' y='68' font-size='56' font-family='Georgia,serif' fill='%2308080b' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <!-- ============ FONTS ============ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- ============ STRUCTURED DATA (JSON-LD) ============ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shardul Date",
+    "url": "https://dateshardul.github.io/",
+    "image": "https://dateshardul.github.io/images/og-image.jpg",
+    "jobTitle": "Mechanical Engineer · AI / Full-Stack Developer",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Indian Institute of Technology, Jodhpur"
+    },
+    "knowsAbout": ["Machine Learning", "Mixed Reality", "Mechanical Design", "Finite Element Analysis", "Full-Stack Development", "Computational Fluid Dynamics"],
+    "email": "mailto:b22me077@iitj.ac.in",
+    "sameAs": [
+      "https://github.com/dateshardul",
+      "https://www.linkedin.com/in/shardul-date/"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <!-- grain + cursor + progress -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="top">
+    <a href="#top" class="brand" aria-label="Shardul Date home">
+      <span class="brand-mark">SD</span>
+      <span class="brand-name">Shardul Date</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="nav-cta" data-magnetic>Let's talk <span aria-hidden="true">↗</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="hero-inner">
+        <p class="hero-eyebrow reveal"><span class="dot"></span> Available for 2026 roles · Open to collaborate</p>
+        <h1 class="hero-title">
+          <span class="line reveal">Shardul</span>
+          <span class="line reveal serif-italic">Date</span>
+        </h1>
+        <div class="hero-roles reveal">
+          <span>I build</span>
+          <span class="rotator" aria-live="polite">
+            <em data-roles>Mixed Reality systems</em>
+          </span>
         </div>
-    </section>
-
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>Graph-Based Timetable Generator</h3>
-                <p>Created and developed a timetable generator using game theory. Received "best project of the course" award. Implemented solution for dynamic constraint changes in timetable.</p>
-            </div>
-            <div class="project-card">
-                <h3>ML Models for Groundwater Quality Prediction</h3>
-                <p>Implemented mathematical and machine learning models to predict groundwater quality from dataset. Used Python, ML Libraries, and Google Colab.</p>
-            </div>
-            <div class="project-card">
-                <h3>ML Models for Computational Fluid Dynamics</h3>
-                <p>Applied ML techniques to CFD datasets. Includes video-image processing and predictive analysis using Python and Latex.</p>
-            </div>
+        <p class="hero-sub reveal">
+          Mechanical Engineer from <strong>IIT Jodhpur</strong> working where hardware meets
+          AI and software — Mixed Reality, digital-twin agriculture, real-time audio engines,
+          FEA and machine design.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#work" class="btn btn-primary" data-magnetic>View selected work</a>
+          <a href="#contact" class="btn btn-ghost" data-magnetic>Get in touch</a>
         </div>
+      </div>
+      <a href="#work" class="scroll-cue reveal" aria-label="Scroll to work">
+        <span>Scroll</span><span class="scroll-line"></span>
+      </a>
     </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <div class="contact-info">
-            <p>Mobile: <a href="tel:+919922112491">+91 9922112491</a></p>
-            <p>Email: <a href="mailto:shardul.date@hotmail.com">shardul.date@hotmail.com</a></p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/shardul-date/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/ShardulDate" target="_blank">GitHub</a>
-            </div>
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Python</span><span>•</span><span>C / C++</span><span>•</span><span>PyTorch</span><span>•</span>
+        <span>Next.js</span><span>•</span><span>FastAPI</span><span>•</span><span>Unity</span><span>•</span>
+        <span>SolidWorks</span><span>•</span><span>FEA</span><span>•</span><span>OpenCV</span><span>•</span>
+        <span>TypeScript</span><span>•</span><span>Docker</span><span>•</span><span>MATLAB</span><span>•</span>
+        <span>LLMs &amp; RAG</span><span>•</span>
+        <span>Python</span><span>•</span><span>C / C++</span><span>•</span><span>PyTorch</span><span>•</span>
+        <span>Next.js</span><span>•</span><span>FastAPI</span><span>•</span><span>Unity</span><span>•</span>
+        <span>SolidWorks</span><span>•</span><span>FEA</span><span>•</span><span>OpenCV</span><span>•</span>
+        <span>TypeScript</span><span>•</span><span>Docker</span><span>•</span><span>MATLAB</span><span>•</span>
+        <span>LLMs &amp; RAG</span><span>•</span>
+      </div>
+    </div>
+
+    <!-- ============ WORK ============ -->
+    <section class="work" id="work">
+      <div class="section-head reveal">
+        <p class="section-index">01 — Selected Work</p>
+        <h2 class="section-title">Things I've <span class="serif-italic">designed &amp; shipped</span></h2>
+      </div>
+
+      <div class="projects">
+        <!-- 1 -->
+        <article class="project reveal" data-tilt>
+          <div class="project-top">
+            <span class="project-no">01</span>
+            <span class="project-year">2025</span>
+          </div>
+          <h3 class="project-name">Holographic Land Terrain</h3>
+          <p class="project-desc">Multi-user Mixed Reality framework that renders a real-time Sahyadri terrain model from elevation data, enabling synchronised spatial collaboration across devices. My B.Tech capstone.</p>
+          <ul class="project-tags"><li>Unity</li><li>Mixed Reality</li><li>3D / DEM</li><li>Networking</li></ul>
+        </article>
+        <!-- 2 -->
+        <article class="project reveal" data-tilt>
+          <div class="project-top">
+            <span class="project-no">02</span>
+            <span class="project-year">2026</span>
+          </div>
+          <h3 class="project-name">KrishiTwin</h3>
+          <p class="project-desc">Digital-twin farming advisor that runs three crop-simulation models over NASA, ERA5 &amp; SoilGrids data to deliver a full irrigation, fertiliser and sowing plan from a farm location in ~18 seconds.</p>
+          <ul class="project-tags"><li>React</li><li>FastAPI</li><li>ML Ensemble</li><li>Crop Sim</li></ul>
+        </article>
+        <!-- 3 -->
+        <article class="project reveal" data-tilt>
+          <div class="project-top">
+            <span class="project-no">03</span>
+            <span class="project-year">2025</span>
+          </div>
+          <h3 class="project-name">Dinachitran</h3>
+          <p class="project-desc">End-to-end AI content pipeline with a human-in-the-loop review workflow — distributed FastAPI + Celery backend, a pluggable LLM/image provider layer, and a Next.js approval dashboard.</p>
+          <ul class="project-tags"><li>FastAPI</li><li>Next.js</li><li>Celery</li><li>Claude API</li></ul>
+        </article>
+        <!-- 4 -->
+        <article class="project reveal" data-tilt>
+          <div class="project-top">
+            <span class="project-no">04</span>
+            <span class="project-year">2025</span>
+          </div>
+          <h3 class="project-name">Distance Measuring</h3>
+          <p class="project-desc">Mobile web app that measures walls, angles and floor area from a phone camera — even in furnished rooms — using monocular depth estimation and semantic segmentation.</p>
+          <ul class="project-tags"><li>PyTorch</li><li>MiDaS</li><li>SegFormer</li><li>Flask</li></ul>
+        </article>
+        <!-- 5 -->
+        <article class="project reveal" data-tilt>
+          <div class="project-top">
+            <span class="project-no">05</span>
+            <span class="project-year">2025</span>
+          </div>
+          <h3 class="project-name">Nrityabhyas Audio Engine</h3>
+          <p class="project-desc">Portable, low-latency multi-stem audio synchronisation engine in modern C++ — verified to a 0.000 ms per-stem offset across a four-gate test suite. Core of a Bharatanatyam practice platform.</p>
+          <ul class="project-tags"><li>C++17</li><li>CMake</li><li>Real-time DSP</li><li>miniaudio</li></ul>
+        </article>
+        <!-- 6 -->
+        <article class="project reveal" data-tilt>
+          <div class="project-top">
+            <span class="project-no">06</span>
+            <span class="project-year">2025</span>
+          </div>
+          <h3 class="project-name">Neo-Speculum Segmented Optics</h3>
+          <p class="project-desc">Research framework for fabricating shatter-proof segmented parabolic mirrors from high-tin bronze — hybridising traditional Indian metallurgy with aerospace precision-optics methods.</p>
+          <ul class="project-tags"><li>Materials</li><li>Aspheric Optics</li><li>Metrology</li><li>Research</li></ul>
+        </article>
+        <!-- 7 -->
+        <article class="project reveal" data-tilt>
+          <div class="project-top">
+            <span class="project-no">07</span>
+            <span class="project-year">2025</span>
+          </div>
+          <h3 class="project-name">Crossed Spherical Gear</h3>
+          <p class="project-desc">Involute spherical gear for a 3-DOF robotic-arm ball joint — SolidWorks modelling with static, dynamic and high-cycle fatigue FEA, plus a web tool to parametrise the gear design.</p>
+          <ul class="project-tags"><li>SolidWorks</li><li>FEA</li><li>Machine Design</li><li>Robotics</li></ul>
+        </article>
+        <!-- 8 -->
+        <article class="project reveal" data-tilt>
+          <div class="project-top">
+            <span class="project-no">08</span>
+            <span class="project-year">2025</span>
+          </div>
+          <h3 class="project-name">Vaahan “Yuvati” CHEV</h3>
+          <p class="project-desc">A CNG Hybrid Electric Vehicle concept for Indian families — series-hybrid powertrain targeting 50–80% lower CO₂, with a three-tier product line, market sizing and supply-chain strategy.</p>
+          <ul class="project-tags"><li>Powertrain</li><li>Hybrid EV</li><li>Product Strategy</li></ul>
+        </article>
+        <!-- 9 -->
+        <article class="project reveal" data-tilt>
+          <div class="project-top">
+            <span class="project-no">09</span>
+            <span class="project-year">2024</span>
+          </div>
+          <h3 class="project-name">PanchangBot</h3>
+          <p class="project-desc">Multilingual Retrieval-Augmented-Generation chatbot that answers Marathi (Devanagari) queries on Hindu astrology by retrieving from classical texts and grounding an LLM's responses.</p>
+          <ul class="project-tags"><li>RAG</li><li>Transformers</li><li>Embeddings</li><li>NLP</li></ul>
+        </article>
+        <!-- 10 -->
+        <article class="project reveal" data-tilt>
+          <div class="project-top">
+            <span class="project-no">10</span>
+            <a class="project-live" href="https://goa-tourism.vercel.app/" target="_blank" rel="noopener">Live ↗</a>
+          </div>
+          <h3 class="project-name">Gomantak Gaman</h3>
+          <p class="project-desc">A deployed Goa heritage-tourism site — 20+ temples, hidden gems, festivals and a categorized gallery, with mobile-first navigation and smooth Framer Motion animations.</p>
+          <ul class="project-tags"><li>Next.js 15</li><li>React 19</li><li>TypeScript</li><li>Framer Motion</li></ul>
+        </article>
+        <!-- 11 -->
+        <article class="project reveal" data-tilt>
+          <div class="project-top">
+            <span class="project-no">11</span>
+            <a class="project-live" href="https://konkan-bhatkanti.vercel.app/" target="_blank" rel="noopener">Live ↗</a>
+          </div>
+          <h3 class="project-name">Konkan Bhatkanti</h3>
+          <p class="project-desc">A deployed Konkan Coast travel guide — living traditions, heritage forts and cave sites, with category filters, featured spotlights and map-based discovery.</p>
+          <ul class="project-tags"><li>Next.js</li><li>React</li><li>TypeScript</li><li>Vercel</li></ul>
+        </article>
+      </div>
+
+      <div class="work-more reveal">
+        <p>And plenty more — RAG voice bots, a card-battle game engine, prime-gap &amp; Fibonacci-period research, inventory optimisation, an FEA solver from scratch…</p>
+        <a href="https://github.com/dateshardul" target="_blank" rel="noopener" class="btn btn-ghost" data-magnetic>Browse GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="about">
+      <div class="section-head reveal">
+        <p class="section-index">02 — About</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-photo reveal">
+          <img src="images/shardul.jpg" alt="Portrait of Shardul Date" loading="lazy" width="480" height="600" />
+          <span class="about-photo-tag">Jodhpur, India</span>
         </div>
+        <div class="about-body">
+          <h2 class="about-lead reveal">I'm a maker who refuses to pick a lane — <span class="serif-italic">mechanical engineering, AI, and software, together.</span></h2>
+          <p class="reveal">Final-year Mechanical Engineering student at IIT Jodhpur with a minor in Management, ranked 4th in my department. I'm happiest turning an ambitious idea into something real — whether that's a multi-user MR system, a real-time audio engine in C++, an FEA solver, or a full-stack AI product.</p>
+          <p class="reveal">I move fluidly between CAD &amp; FEA, machine learning, and shipping production web apps — and I care about craft at every layer, from the math to the pixels.</p>
+          <div class="stats reveal">
+            <div class="stat"><span class="stat-num" data-count="8.45" data-decimals="2">0</span><span class="stat-label">CGPA</span></div>
+            <div class="stat"><span class="stat-num" data-prefix="#" data-count="4">0</span><span class="stat-label">Dept. Rank</span></div>
+            <div class="stat"><span class="stat-num" data-count="8224">0</span><span class="stat-label">JEE Adv. AIR</span></div>
+            <div class="stat"><span class="stat-num" data-count="25" data-suffix="+">0</span><span class="stat-label">Projects</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- capabilities -->
+      <div class="caps">
+        <div class="cap reveal">
+          <h3>Engineering &amp; Design</h3>
+          <p>SolidWorks (part, assembly, drafting), FEA, CFD, thermal &amp; fatigue analysis, machine design, GD&amp;T.</p>
+        </div>
+        <div class="cap reveal">
+          <h3>AI &amp; Data</h3>
+          <p>PyTorch, TensorFlow, scikit-learn, OpenCV, LLMs &amp; RAG, computer vision, time-series, data engineering.</p>
+        </div>
+        <div class="cap reveal">
+          <h3>Software</h3>
+          <p>Python, C/C++, TypeScript; Next.js, React, FastAPI, Flask, Unity; Docker, PostgreSQL, Git.</p>
+        </div>
+      </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="experience" id="experience">
+      <div class="section-head reveal">
+        <p class="section-index">03 — Experience</p>
+        <h2 class="section-title">Where I've <span class="serif-italic">worked &amp; led</span></h2>
+      </div>
+      <ol class="timeline">
+        <li class="tl-item reveal">
+          <span class="tl-year">2025</span>
+          <div class="tl-body">
+            <h3>UI Intern — DataOceano</h3>
+            <p>Built UI for register, login, backup, restore, catalog, replication &amp; migration flows talking to databases over REST APIs. Worked in Dart / Flutter / FlutterFlow.</p>
+          </div>
+        </li>
+        <li class="tl-item reveal">
+          <span class="tl-year">2025</span>
+          <div class="tl-body">
+            <h3>NLP Intern — KJSIT</h3>
+            <p>Created a training dataset for a Sanskrit–English linguistic NLP model; handled data-cleaning, quality assurance and error analysis.</p>
+          </div>
+        </li>
+        <li class="tl-item reveal">
+          <span class="tl-year">2024–25</span>
+          <div class="tl-body">
+            <h3>India Space Lab &amp; Leadership</h3>
+            <p>Drone / space-tech program (India Space Lab). Resource Manager &amp; reviver of the Automobile Club, core member of the Robotics Club, and lead organiser of the campus Ganpati festival.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+      <div class="contact-inner">
+        <p class="section-index reveal">04 — Contact</p>
+        <h2 class="contact-title reveal">Let's build something<br><span class="serif-italic">worth remembering.</span></h2>
+        <a href="mailto:b22me077@iitj.ac.in" class="contact-email reveal" data-magnetic>b22me077@iitj.ac.in</a>
+        <div class="contact-links reveal">
+          <a href="https://github.com/dateshardul" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/shardul-date/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="tel:+919922112491">+91 99221 12491</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year">2026</span> Shardul Date</span>
+    <span>Built from scratch · IIT Jodhpur</span>
+    <a href="#top" class="to-top">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>

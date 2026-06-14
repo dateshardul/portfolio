@@ -1,0 +1,11 @@
+# local python virtualenv (not part of the site)
+env/
+
+# build / preview artifacts
+_preview.png
+_verify.png
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
