@@ -10,7 +10,7 @@
   <meta name="keywords" content="Shardul Date, IIT Jodhpur, Mechanical Engineer, AI Engineer, Full Stack Developer, Machine Learning, Unity, SolidWorks, FEA, CFD, Digital Twin, Portfolio" />
   <meta name="author" content="Shardul Date" />
   <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#08080b" />
+  <meta name="theme-color" content="#efe3c8" />
   <link rel="canonical" href="https://shardul.date/" />
 
   <!-- ============ OPEN GRAPH ============ -->
@@ -30,13 +30,13 @@
   <meta name="twitter:image" content="https://shardul.date/images/og-image.jpg" />
 
   <!-- ============ ICONS / MANIFEST ============ -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23ff5c35'/%3E%3Ctext x='50' y='68' font-size='56' font-family='Georgia,serif' fill='%2308080b' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='47' fill='%235f7345'/%3E%3Ccircle cx='50' cy='50' r='38' fill='none' stroke='%23cf9b3f' stroke-width='2' opacity='.6'/%3E%3Ccircle cx='69' cy='53' r='5' fill='%23cf9b3f'/%3E%3Ctext x='46' y='66' font-size='46' font-family='Georgia,serif' fill='%23f1e7d0' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
   <link rel="manifest" href="site.webmanifest" />
 
   <!-- ============ FONTS ============ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 
@@ -64,25 +64,50 @@
 </head>
 
 <body>
-  <!-- grain + cursor + progress -->
+  <!-- ============ THE ROUND GREEN DOOR (entry overlay) ============ -->
+  <div class="door" id="door" role="dialog" aria-label="Welcome to Bag End">
+    <div class="door-scene">
+      <div class="door-round" id="doorRound">
+        <span class="door-ring"></span>
+        <span class="door-ring r2"></span>
+        <span class="door-plank"></span>
+        <span class="door-knob"></span>
+        <span class="door-letter">SD</span>
+      </div>
+      <p class="door-sign" id="doorSign">No admittance<br><em>except on party business</em></p>
+      <button class="door-enter" id="doorEnter">Knock &amp; come in <span aria-hidden="true">→</span></button>
+      <button class="door-skip" id="doorSkip">skip</button>
+    </div>
+  </div>
+
+  <!-- ambient layers -->
   <div class="grain" aria-hidden="true"></div>
-  <div class="cursor" aria-hidden="true"></div>
-  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="hearth-glow" aria-hidden="true"></div>
+  <div class="lantern" aria-hidden="true"></div>
   <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- comfort controls -->
+  <div class="comforts" aria-hidden="false">
+    <button class="comfort-btn" id="soundBtn" aria-pressed="false" title="Fireside sound">
+      <span class="comfort-ico">🔥</span><span class="comfort-label">hearth</span>
+    </button>
+  </div>
 
   <!-- ============ NAV ============ -->
   <header class="nav" id="top">
     <a href="#top" class="brand" aria-label="Shardul Date home">
-      <span class="brand-mark">SD</span>
-      <span class="brand-name">Shardul Date</span>
+      <span class="brand-mark" aria-hidden="true">
+        <span class="brand-door"></span>
+      </span>
+      <span class="brand-name">Shardul Date<small>Bag&nbsp;End · Jodhpur</small></span>
     </a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
+      <a href="#work">Treasures</a>
+      <a href="#about">The Hobbit</a>
+      <a href="#experience">Travels</a>
+      <a href="#contact">Knock</a>
     </nav>
-    <a href="#contact" class="nav-cta" data-magnetic>Let's talk <span aria-hidden="true">↗</span></a>
+    <a href="#contact" class="nav-cta" data-magnetic>Come in <span aria-hidden="true">↝</span></a>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span></button>
   </header>
 
@@ -92,38 +117,65 @@
       <div class="hero-bg" aria-hidden="true"><span></span><span></span><span></span></div>
       <div class="hero-grid">
         <div class="hero-inner">
-        <p class="hero-eyebrow reveal"><span class="dot"></span> Available for 2026 roles · Open to collaborate</p>
+        <p class="hero-eyebrow reveal" id="greeting"><span class="dot"></span> Welcome, traveller — the kettle's on</p>
         <h1 class="hero-title">
           <span class="line reveal">Shardul</span>
           <span class="line reveal serif-italic">Date</span>
         </h1>
         <div class="hero-roles reveal">
-          <span>I build</span>
+          <span>I make</span>
           <span class="rotator" aria-live="polite">
-            <em data-roles>Mixed Reality systems</em>
+            <em data-roles>Mixed Reality worlds</em>
           </span>
         </div>
         <p class="hero-sub reveal">
-          Mechanical Engineer from <strong>IIT Jodhpur</strong> working where hardware meets
-          AI and software — Mixed Reality, digital-twin agriculture, real-time audio engines,
-          FEA and machine design.
+          A Mechanical Engineer from <strong>IIT Jodhpur</strong> who keeps a cosy workshop and
+          wanders out for the big adventures — Mixed Reality, digital-twin farms, real-time audio
+          engines, FEA and machine design. <span class="hand">There and back again.</span>
         </p>
         <div class="hero-actions reveal">
-          <a href="#work" class="btn btn-primary" data-magnetic>View selected work</a>
-          <a href="#contact" class="btn btn-ghost" data-magnetic>Get in touch</a>
+          <a href="#work" class="btn btn-primary" data-magnetic>See what I brought back</a>
+          <a href="#contact" class="btn btn-ghost" data-magnetic>Say hello</a>
         </div>
         </div>
         <figure class="hero-portrait reveal">
-          <img src="images/shardul.jpg" alt="Portrait of Shardul Date, Mechanical Engineer at IIT Jodhpur" width="460" height="560" />
-          <figcaption class="hero-portrait-badge"><span class="dot-live"></span> Based in Jodhpur, India</figcaption>
+          <span class="portrait-ring" aria-hidden="true"></span>
+          <span class="portrait-sign" aria-hidden="true">Bag End</span>
+          <div class="portrait-photo">
+            <img src="images/shardul.jpg" alt="Portrait of Shardul Date, Mechanical Engineer at IIT Jodhpur" width="460" height="560" />
+          </div>
+          <figcaption class="hero-portrait-badge" id="weatherBadge"><span class="dot-live"></span> Looking out over the hills…</figcaption>
         </figure>
       </div>
-      <a href="#work" class="scroll-cue reveal" aria-label="Scroll to work">
-        <span>Scroll</span><span class="scroll-line"></span>
+      <a href="#hills" class="scroll-cue reveal" aria-label="Scroll down">
+        <span>Step in</span><span class="scroll-line"></span>
       </a>
     </section>
 
-    <!-- ============ MARQUEE ============ -->
+    <!-- ============ WINDOW ON THE HILLS (live weather) ============ -->
+    <section class="hills" id="hills">
+      <div class="window reveal">
+        <div class="window-scene" id="windowScene" data-sky="day">
+          <span class="sky"></span>
+          <span class="celestial" id="celestial"></span>
+          <span class="stars" aria-hidden="true"></span>
+          <span class="clouds" id="clouds" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="rain" id="rain" aria-hidden="true"></span>
+          <span class="hill h3"></span>
+          <span class="hill h2"></span>
+          <span class="hill h1"></span>
+          <span class="far-door" aria-hidden="true"></span>
+        </div>
+        <div class="window-frame" aria-hidden="true"></div>
+      </div>
+      <div class="hills-copy reveal">
+        <p class="hills-eyebrow">The view from the round window</p>
+        <h2 class="hills-line" id="hillsGreeting">However the weather looks where you are, there's a warm seat here.</h2>
+        <p class="hills-sub" id="hillsSub">Pull up a chair. Look around. No rush — second breakfast can wait.</p>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE (provisions) ============ -->
     <div class="marquee" aria-hidden="true">
       <div class="marquee-track">
         <span>Python</span><span>•</span><span>C / C++</span><span>•</span><span>PyTorch</span><span>•</span>
@@ -142,8 +194,9 @@
     <!-- ============ WORK ============ -->
     <section class="work" id="work">
       <div class="section-head reveal">
-        <p class="section-index">01 — Selected Work</p>
-        <h2 class="section-title">Things I've <span class="serif-italic">designed &amp; shipped</span></h2>
+        <p class="section-index">01 — From the road</p>
+        <h2 class="section-title">Treasures I <span class="serif-italic">brought back</span></h2>
+        <p class="section-note hand">every adventure leaves something on the shelf →</p>
       </div>
 
       <div class="projects">
@@ -260,15 +313,15 @@
       </div>
 
       <div class="work-more reveal">
-        <p>And plenty more — RAG voice bots, a card-battle game engine, prime-gap &amp; Fibonacci-period research, inventory optimisation, an FEA solver from scratch…</p>
-        <a href="https://github.com/dateshardul" target="_blank" rel="noopener" class="btn btn-ghost" data-magnetic>Browse GitHub <span aria-hidden="true">↗</span></a>
+        <p>And plenty more in the pack — RAG voice bots, a card-battle game engine, prime-gap &amp; Fibonacci-period research, inventory optimisation, an FEA solver from scratch…</p>
+        <a href="https://github.com/dateshardul" target="_blank" rel="noopener" class="btn btn-ghost" data-magnetic>Browse the whole shelf <span aria-hidden="true">↗</span></a>
       </div>
     </section>
 
     <!-- ============ ABOUT ============ -->
     <section class="about" id="about">
       <div class="section-head reveal">
-        <p class="section-index">02 — About</p>
+        <p class="section-index">02 — At home</p>
       </div>
       <div class="about-grid">
         <div class="about-photo reveal">
@@ -276,9 +329,9 @@
           <span class="about-photo-tag">Jodhpur, India</span>
         </div>
         <div class="about-body">
-          <h2 class="about-lead reveal">I'm a maker who refuses to pick a lane — <span class="serif-italic">mechanical engineering, AI, and software, together.</span></h2>
+          <h2 class="about-lead reveal">A maker who refuses to pick one lane — <span class="serif-italic">mechanical engineering, AI, and software, under one roof.</span></h2>
           <p class="reveal">Final-year Mechanical Engineering student at IIT Jodhpur with a minor in Management, ranked 4th in my department. I'm happiest turning an ambitious idea into something real — whether that's a multi-user MR system, a real-time audio engine in C++, an FEA solver, or a full-stack AI product.</p>
-          <p class="reveal">I move fluidly between CAD &amp; FEA, machine learning, and shipping production web apps — and I care about craft at every layer, from the math to the pixels.</p>
+          <p class="reveal">I move fluidly between CAD &amp; FEA, machine learning, and shipping production web apps — and I care about craft at every layer, from the math to the pixels. <span class="hand">Frontier work; homely heart.</span></p>
           <div class="stats reveal">
             <div class="stat"><span class="stat-num" data-count="8.45" data-decimals="2">0</span><span class="stat-label">CGPA</span></div>
             <div class="stat"><span class="stat-num" data-prefix="#" data-count="4">0</span><span class="stat-label">Dept. Rank</span></div>
@@ -308,8 +361,8 @@
     <!-- ============ EXPERIENCE ============ -->
     <section class="experience" id="experience">
       <div class="section-head reveal">
-        <p class="section-index">03 — Experience</p>
-        <h2 class="section-title">Where I've <span class="serif-italic">worked &amp; led</span></h2>
+        <p class="section-index">03 — Travels</p>
+        <h2 class="section-title">Where the road <span class="serif-italic">has taken me</span></h2>
       </div>
       <ol class="timeline">
         <li class="tl-item reveal">
@@ -339,8 +392,8 @@
     <!-- ============ CONTACT ============ -->
     <section class="contact" id="contact">
       <div class="contact-inner">
-        <p class="section-index reveal">04 — Contact</p>
-        <h2 class="contact-title reveal">Let's build something<br><span class="serif-italic">worth remembering.</span></h2>
+        <p class="section-index reveal">04 — Knock on the door</p>
+        <h2 class="contact-title reveal">Let's build something<br><span class="serif-italic">worth coming home to.</span></h2>
         <a href="mailto:b22me077@iitj.ac.in" class="contact-email reveal" data-magnetic>b22me077@iitj.ac.in</a>
         <div class="contact-links reveal">
           <a href="https://github.com/dateshardul" target="_blank" rel="noopener">GitHub ↗</a>
@@ -352,9 +405,9 @@
   </main>
 
   <footer class="footer">
-    <span>© <span id="year">2026</span> Shardul Date</span>
-    <span>Built from scratch · IIT Jodhpur</span>
-    <a href="#top" class="to-top">Back to top ↑</a>
+    <span class="footer-bye hand">Thank you for visiting — mind the step.</span>
+    <span>© <span id="year">2026</span> Shardul Date · Built from scratch at IIT Jodhpur</span>
+    <a href="#top" class="to-top">Back up the path ↑</a>
   </footer>
 
   <script src="script.js"></script>
