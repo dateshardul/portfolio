@@ -78,7 +78,7 @@ portfolios at https://www.sitebuilderreport.com/inspiration/engineer-portfolios
 3. **Window on the hills** — the live scene + a weather-aware sentence + "pull up a chair" sub.
 4. **Marquee (provisions)** — skill ticker: Python · C/C++ · PyTorch · Next.js · FastAPI · Unity ·
    SolidWorks · FEA · OpenCV · TypeScript · Docker · MATLAB · LLMs & RAG.
-5. **Work — "Treasures I brought back"** — the 11 cards below (numbered wax-seal style).
+5. **Work — "Treasures I brought back"** — the 13 cards below (numbered wax-seal style).
 6. **About — "At home"** — photo + lead "A maker who refuses to pick one lane — mechanical
    engineering, AI, and software, under one roof." + 2 paras + stats (CGPA 8.45 · Dept #4 ·
    JEE Adv 8224 · 25+ projects) + 3 capability cards (Engineering & Design / AI & Data / Software).
@@ -114,6 +114,12 @@ portfolios at https://www.sitebuilderreport.com/inspiration/engineer-portfolios
     site, 20+ temples, gallery, Framer Motion. *Next.js 15 · React 19 · TypeScript · Framer Motion*
 11. **Konkan Bhatkanti** (Live ↗ https://konkan-bhatkanti.vercel.app/) — Deployed Konkan Coast
     travel guide; filters, spotlights, map discovery. *Next.js · React · TypeScript · Vercel*
+12. **Jyotish Market Model** (In progress) — Quantitative pipeline encoding Panchang/Jyotish
+    parameters (tithi, nakshatra, planetary transits) as time-series features, back-tested for
+    statistically honest signal in financial markets. *Python · Time-Series · Ephemeris · Back-testing*
+13. **Shastra Nimitta** (In progress) — Encoding rainfall & earthquake indicators from ancient
+    Indian scriptures into a machine-readable rule set, cross-validated against modern
+    meteorological/seismological data with interpretable ML. *Knowledge Eng. · Python · Geoscience Data · ML*
 
 Plus a "browse the whole shelf" link → https://github.com/dateshardul
 
